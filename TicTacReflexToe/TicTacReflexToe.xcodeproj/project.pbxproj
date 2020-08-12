@@ -15,6 +15,12 @@
 		F57AB43524E33F2D003B3757 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F57AB43324E33F2D003B3757 /* LaunchScreen.storyboard */; };
 		F57AB44024E42019003B3757 /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57AB43F24E42019003B3757 /* RegisterTableViewController.swift */; };
 		F57AB44224E42042003B3757 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57AB44124E42042003B3757 /* LogViewController.swift */; };
+		F57AB44B24E42150003B3757 /* board.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F57AB44724E42150003B3757 /* board.jpg */; };
+		F57AB44C24E42150003B3757 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = F57AB44824E42150003B3757 /* cross.png */; };
+		F57AB44D24E42150003B3757 /* logbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F57AB44924E42150003B3757 /* logbg.jpg */; };
+		F57AB44E24E42150003B3757 /* nought.png in Resources */ = {isa = PBXBuildFile; fileRef = F57AB44A24E42150003B3757 /* nought.png */; };
+		F57AB45024E42BA4003B3757 /* gamebg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F57AB44F24E42BA4003B3757 /* gamebg.jpg */; };
+		F57AB45224E42D98003B3757 /* gbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F57AB45124E42D98003B3757 /* gbg.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		F57AB43624E33F2D003B3757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F57AB43F24E42019003B3757 /* RegisterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
 		F57AB44124E42042003B3757 /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		F57AB44724E42150003B3757 /* board.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = board.jpg; sourceTree = "<group>"; };
+		F57AB44824E42150003B3757 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		F57AB44924E42150003B3757 /* logbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logbg.jpg; sourceTree = "<group>"; };
+		F57AB44A24E42150003B3757 /* nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nought.png; sourceTree = "<group>"; };
+		F57AB44F24E42BA4003B3757 /* gamebg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gamebg.jpg; sourceTree = "<group>"; };
+		F57AB45124E42D98003B3757 /* gbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gbg.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 		F57AB42424E33F2B003B3757 /* TicTacReflexToe */ = {
 			isa = PBXGroup;
 			children = (
+				F57AB44624E420FA003B3757 /* Assets */,
 				F57AB43C24E41F2D003B3757 /* Controllers */,
 				F57AB42524E33F2B003B3757 /* AppDelegate.swift */,
 				F57AB42724E33F2B003B3757 /* SceneDelegate.swift */,
@@ -79,6 +92,19 @@
 				F57AB44124E42042003B3757 /* LogViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F57AB44624E420FA003B3757 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F57AB45124E42D98003B3757 /* gbg.jpg */,
+				F57AB44F24E42BA4003B3757 /* gamebg.jpg */,
+				F57AB44724E42150003B3757 /* board.jpg */,
+				F57AB44824E42150003B3757 /* cross.png */,
+				F57AB44924E42150003B3757 /* logbg.jpg */,
+				F57AB44A24E42150003B3757 /* nought.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +165,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57AB45224E42D98003B3757 /* gbg.jpg in Resources */,
+				F57AB44E24E42150003B3757 /* nought.png in Resources */,
+				F57AB44C24E42150003B3757 /* cross.png in Resources */,
+				F57AB44D24E42150003B3757 /* logbg.jpg in Resources */,
+				F57AB44B24E42150003B3757 /* board.jpg in Resources */,
+				F57AB45024E42BA4003B3757 /* gamebg.jpg in Resources */,
 				F57AB43524E33F2D003B3757 /* LaunchScreen.storyboard in Resources */,
 				F57AB43224E33F2D003B3757 /* Assets.xcassets in Resources */,
 				F57AB42D24E33F2B003B3757 /* Main.storyboard in Resources */,

@@ -232,9 +232,31 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbe-ZU-92U">
+                                <rect key="frame" x="142.5" y="742" width="130" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="pM9-0n-d4r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Reset Game" image="arrow.clockwise" catalog="system"/>
+                                <connections>
+                                    <action selector="new_game_req:" destination="K5e-Hi-9tP" eventType="touchUpInside" id="7ZQ-wV-HIN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYa-wz-Ifu">
+                                <rect key="frame" x="163.5" y="180" width="88.5" height="48"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="dbe-ZU-92U" firstAttribute="centerX" secondItem="2BM-bx-lZP" secondAttribute="centerX" constant="0.5" id="1Ub-Cd-fIB"/>
+                            <constraint firstItem="NYa-wz-Ifu" firstAttribute="centerX" secondItem="2BM-bx-lZP" secondAttribute="centerX" constant="0.5" id="2dA-p2-byK"/>
+                            <constraint firstItem="dbe-ZU-92U" firstAttribute="top" secondItem="RIc-FR-ROI" secondAttribute="bottom" constant="30" id="2wG-vf-a0f"/>
+                            <constraint firstItem="RIc-FR-ROI" firstAttribute="top" secondItem="NYa-wz-Ifu" secondAttribute="bottom" constant="10" id="9FD-Sj-v3h"/>
                             <constraint firstItem="RIc-FR-ROI" firstAttribute="leading" secondItem="y1v-RF-Vb6" secondAttribute="leading" constant="10" id="9n7-qc-Bof"/>
                             <constraint firstItem="y1v-RF-Vb6" firstAttribute="bottom" secondItem="RIc-FR-ROI" secondAttribute="bottom" constant="150" id="Eql-mj-Qyt"/>
                             <constraint firstItem="y1v-RF-Vb6" firstAttribute="trailing" secondItem="RIc-FR-ROI" secondAttribute="trailing" constant="10" id="FzU-nH-rnU"/>
@@ -251,6 +273,10 @@
                         <viewLayoutGuide key="safeArea" id="y1v-RF-Vb6"/>
                     </view>
                     <navigationItem key="navigationItem" id="alJ-qf-Njo"/>
+                    <connections>
+                        <outlet property="reset_btn" destination="dbe-ZU-92U" id="nr1-N9-0Dc"/>
+                        <outlet property="result_lbl" destination="NYa-wz-Ifu" id="Ups-R0-HaI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nK-No-StA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -302,6 +328,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="board.jpg" width="267.83999633789062" height="281.8800048828125"/>
         <image name="gbg.jpg" width="1736.699951171875" height="1204.800048828125"/>
         <image name="logbg.jpg" width="469.5" height="312.75"/>

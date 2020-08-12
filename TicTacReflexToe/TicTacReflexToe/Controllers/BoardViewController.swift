@@ -14,10 +14,12 @@ class BoardViewController: UIViewController {
     var gameState = [0,0,0,0,0,0,0,0,0]
     let winnigCombinations = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]
     
+    @IBOutlet weak var reset_btn: UIButton!
+    @IBOutlet weak var result_lbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        result_lbl.isHidden = true
     }
     
     @IBAction func btn_move(_ sender: UIButton) {
@@ -40,22 +42,37 @@ class BoardViewController: UIViewController {
                 
                 // winner
                 activeGame = false
-//                UIView.animate(withDuration: 1) {
-//                    self.btnPlayAgain.center = CGPoint(x: self.btnPlayAgain.center.x + 500, y: self.btnPlayAgain.center.y)
-//                }
-//                btnPlayAgain.isHidden = false
-//                resultLabel.isHidden = false
+                reset_btn.titleLabel?.text = " Play Again?"
+                result_lbl.isHidden = false
                 
                 if gameState[combination[0]] == 1 {
                     print("winner is nought")
-//                    resultLabel.text = "winner is nought"
+                    result_lbl.text = "Winner: Nought!"
                     
                 } else {
                     print("winner is cross")
-//                    resultLabel.text = "winner is cross"
+                    result_lbl.text = "Winner: Cross!"
                 }
                 
             }
         }
     }
+    
+    
+    @IBAction func new_game_req(_ sender: UIButton) {
+        reset_btn.titleLabel?.text = " Reset Game"
+        result_lbl.isHidden = true
+        gameState = [0,0,0,0,0,0,0,0,0]
+        activeGame = true
+        for i in 1..<10 {
+            if let button = view.viewWithTag(i) as? UIButton {
+                button.setImage(nil, for: [])
+            }
+        }
+    }
+        
+    
+    
 }
+
+

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F52735BA24E44CBF00514168 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = F52735B924E44CBF00514168 /* cross.png */; };
 		F57AB42624E33F2B003B3757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57AB42524E33F2B003B3757 /* AppDelegate.swift */; };
 		F57AB42824E33F2B003B3757 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57AB42724E33F2B003B3757 /* SceneDelegate.swift */; };
 		F57AB42D24E33F2B003B3757 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F57AB42B24E33F2B003B3757 /* Main.storyboard */; };
@@ -19,11 +20,11 @@
 		F57AB44D24E42150003B3757 /* logbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F57AB44924E42150003B3757 /* logbg.jpg */; };
 		F57AB44E24E42150003B3757 /* nought.png in Resources */ = {isa = PBXBuildFile; fileRef = F57AB44A24E42150003B3757 /* nought.png */; };
 		F57AB45224E42D98003B3757 /* gbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F57AB45124E42D98003B3757 /* gbg.jpg */; };
-		F57AB45424E43D90003B3757 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = F57AB45324E43D90003B3757 /* Assets */; };
 		F57AB45624E443AE003B3757 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57AB45524E443AE003B3757 /* BoardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F52735B924E44CBF00514168 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
 		F57AB42224E33F2B003B3757 /* TicTacReflexToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacReflexToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57AB42524E33F2B003B3757 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F57AB42724E33F2B003B3757 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		F57AB44924E42150003B3757 /* logbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logbg.jpg; sourceTree = "<group>"; };
 		F57AB44A24E42150003B3757 /* nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nought.png; sourceTree = "<group>"; };
 		F57AB45124E42D98003B3757 /* gbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gbg.jpg; sourceTree = "<group>"; };
-		F57AB45324E43D90003B3757 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets; sourceTree = "<group>"; };
 		F57AB45524E443AE003B3757 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +98,7 @@
 		F57AB44624E420FA003B3757 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				F57AB45324E43D90003B3757 /* Assets */,
+				F52735B924E44CBF00514168 /* cross.png */,
 				F57AB45124E42D98003B3757 /* gbg.jpg */,
 				F57AB44724E42150003B3757 /* board.jpg */,
 				F57AB44924E42150003B3757 /* logbg.jpg */,
@@ -165,8 +165,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52735BA24E44CBF00514168 /* cross.png in Resources */,
 				F57AB45224E42D98003B3757 /* gbg.jpg in Resources */,
-				F57AB45424E43D90003B3757 /* Assets in Resources */,
 				F57AB44E24E42150003B3757 /* nought.png in Resources */,
 				F57AB44D24E42150003B3757 /* logbg.jpg in Resources */,
 				F57AB44B24E42150003B3757 /* board.jpg in Resources */,

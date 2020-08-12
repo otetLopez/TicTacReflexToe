@@ -22,5 +22,40 @@ class BoardViewController: UIViewController {
     
     @IBAction func btn_move(_ sender: UIButton) {
         print("Button is pressed")
+        let activePosition = sender.tag - 1
+        if gameState[activePosition] == 0 && activeGame {
+            gameState[activePosition] = activePlayer
+            if activePlayer == 1 {
+                sender.setImage(UIImage(named: "nought.png"), for: [])
+                activePlayer = 2
+            } else {
+                sender.setImage(UIImage(named: "cross.png"), for: [])
+                activePlayer = 1
+            }
+        }
+        
+        for combination in winnigCombinations {
+            print(gameState[combination[0]])
+            if gameState[combination[0]] != 0 && gameState[combination[1]] == gameState[combination[2]] && gameState[combination[2]] == gameState[combination[0]] {
+                
+                // winner
+                activeGame = false
+//                UIView.animate(withDuration: 1) {
+//                    self.btnPlayAgain.center = CGPoint(x: self.btnPlayAgain.center.x + 500, y: self.btnPlayAgain.center.y)
+//                }
+//                btnPlayAgain.isHidden = false
+//                resultLabel.isHidden = false
+                
+                if gameState[combination[0]] == 1 {
+                    print("winner is nought")
+//                    resultLabel.text = "winner is nought"
+                    
+                } else {
+                    print("winner is cross")
+//                    resultLabel.text = "winner is cross"
+                }
+                
+            }
+        }
     }
 }

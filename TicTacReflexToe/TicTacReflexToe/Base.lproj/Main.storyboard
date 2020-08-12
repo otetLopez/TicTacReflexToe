@@ -34,21 +34,87 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logbg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="oKx-sP-buc">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlI-aQ-dt3">
-                                <rect key="frame" x="186" y="550" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlI-aQ-dt3">
+                                <rect key="frame" x="30" y="520" width="354" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="0.50417380136986301" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <segue destination="JNG-Q4-H6i" kind="show" id="vn1-hY-GfO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ic6-4I-wOr">
+                                <rect key="frame" x="118" y="782" width="179" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLZ-2V-s4F">
+                                <rect key="frame" x="177" y="806" width="61" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nRd-eW-LmB">
+                                <rect key="frame" x="30" y="418" width="354" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="0.59896725171232879" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Kvm-Vr-WpM"/>
+                                </constraints>
+                                <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="09h-fj-VuM">
+                                <rect key="frame" x="30" y="469" width="354" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="0.59896725169999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="fj0-u4-xzO"/>
+                                </constraints>
+                                <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tac Reflex Toe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnj-6m-cF1">
+                                <rect key="frame" x="128" y="238" width="159" height="19"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ttrt.png" translatesAutoresizingMaskIntoConstraints="NO" id="xuU-uw-L8g">
+                                <rect key="frame" x="157.5" y="138" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="P5m-lh-whR"/>
+                                    <constraint firstAttribute="height" constant="100" id="VRR-rn-jAf"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="jLZ-2V-s4F" firstAttribute="top" secondItem="Ic6-4I-wOr" secondAttribute="bottom" id="23k-2O-p4j"/>
+                            <constraint firstItem="nut-eK-4ab" firstAttribute="bottom" secondItem="jLZ-2V-s4F" secondAttribute="bottom" constant="20" id="8E2-IU-QYH"/>
+                            <constraint firstItem="nRd-eW-LmB" firstAttribute="leading" secondItem="nut-eK-4ab" secondAttribute="leading" constant="30" id="8or-oH-6PF"/>
+                            <constraint firstItem="nut-eK-4ab" firstAttribute="trailing" secondItem="zlI-aQ-dt3" secondAttribute="trailing" constant="30" id="BC7-c0-9y6"/>
                             <constraint firstItem="nut-eK-4ab" firstAttribute="trailing" secondItem="oKx-sP-buc" secondAttribute="trailing" id="Emo-EI-D8P"/>
+                            <constraint firstItem="xuU-uw-L8g" firstAttribute="centerX" secondItem="JZR-n9-hll" secondAttribute="centerX" constant="0.5" id="FP0-bm-i0W"/>
+                            <constraint firstItem="09h-fj-VuM" firstAttribute="leading" secondItem="nut-eK-4ab" secondAttribute="leading" constant="30" id="InZ-Wd-IwJ"/>
+                            <constraint firstItem="nut-eK-4ab" firstAttribute="trailing" secondItem="nRd-eW-LmB" secondAttribute="trailing" constant="30" id="KOM-w4-PO7"/>
+                            <constraint firstItem="xuU-uw-L8g" firstAttribute="top" secondItem="nut-eK-4ab" secondAttribute="top" constant="50" id="NXY-jH-P3T"/>
+                            <constraint firstItem="nut-eK-4ab" firstAttribute="trailing" secondItem="09h-fj-VuM" secondAttribute="trailing" constant="30" id="R9o-Wc-YIk"/>
                             <constraint firstItem="nut-eK-4ab" firstAttribute="bottom" secondItem="oKx-sP-buc" secondAttribute="bottom" id="V3z-Mb-DiC"/>
+                            <constraint firstItem="jLZ-2V-s4F" firstAttribute="centerX" secondItem="JZR-n9-hll" secondAttribute="centerX" constant="0.5" id="VmB-U6-wTQ"/>
                             <constraint firstItem="oKx-sP-buc" firstAttribute="top" secondItem="nut-eK-4ab" secondAttribute="top" id="ZQM-9L-2oP"/>
+                            <constraint firstItem="09h-fj-VuM" firstAttribute="top" secondItem="nRd-eW-LmB" secondAttribute="bottom" constant="15" id="bCf-uz-UWS"/>
+                            <constraint firstItem="wnj-6m-cF1" firstAttribute="top" secondItem="xuU-uw-L8g" secondAttribute="bottom" id="dSu-6u-hTn"/>
+                            <constraint firstItem="Ic6-4I-wOr" firstAttribute="centerX" secondItem="JZR-n9-hll" secondAttribute="centerX" constant="0.5" id="hfz-2M-Hvo"/>
+                            <constraint firstItem="nRd-eW-LmB" firstAttribute="top" secondItem="nut-eK-4ab" secondAttribute="top" constant="330" id="nUG-fh-JMM"/>
+                            <constraint firstItem="wnj-6m-cF1" firstAttribute="centerX" secondItem="JZR-n9-hll" secondAttribute="centerX" constant="0.5" id="u7t-bQ-y4R"/>
+                            <constraint firstItem="zlI-aQ-dt3" firstAttribute="leading" secondItem="nut-eK-4ab" secondAttribute="leading" constant="30" id="ve4-6v-NBR"/>
                             <constraint firstItem="oKx-sP-buc" firstAttribute="leading" secondItem="JZR-n9-hll" secondAttribute="leading" id="yEx-Zc-yKQ"/>
+                            <constraint firstItem="zlI-aQ-dt3" firstAttribute="top" secondItem="09h-fj-VuM" secondAttribute="bottom" constant="15" id="zy2-nd-2zJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nut-eK-4ab"/>
                     </view>
@@ -332,5 +398,6 @@
         <image name="board.jpg" width="267.83999633789062" height="281.8800048828125"/>
         <image name="gbg.jpg" width="1736.699951171875" height="1204.800048828125"/>
         <image name="logbg.jpg" width="469.5" height="312.75"/>
+        <image name="ttrt.png" width="150.46530151367188" height="150.46530151367188"/>
     </resources>
 </document>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F52735BA24E44CBF00514168 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = F52735B924E44CBF00514168 /* cross.png */; };
+		F52735BC24E488F000514168 /* tic-tac-toe-hand-drawn-game.png in Resources */ = {isa = PBXBuildFile; fileRef = F52735BB24E488F000514168 /* tic-tac-toe-hand-drawn-game.png */; };
+		F52735BE24E48AAB00514168 /* ttrt.png in Resources */ = {isa = PBXBuildFile; fileRef = F52735BD24E48AAB00514168 /* ttrt.png */; };
 		F57AB42624E33F2B003B3757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57AB42524E33F2B003B3757 /* AppDelegate.swift */; };
 		F57AB42824E33F2B003B3757 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57AB42724E33F2B003B3757 /* SceneDelegate.swift */; };
 		F57AB42D24E33F2B003B3757 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F57AB42B24E33F2B003B3757 /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		F52735B924E44CBF00514168 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		F52735BB24E488F000514168 /* tic-tac-toe-hand-drawn-game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tic-tac-toe-hand-drawn-game.png"; sourceTree = "<group>"; };
+		F52735BD24E48AAB00514168 /* ttrt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ttrt.png; sourceTree = "<group>"; };
 		F57AB42224E33F2B003B3757 /* TicTacReflexToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacReflexToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57AB42524E33F2B003B3757 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F57AB42724E33F2B003B3757 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,8 +102,10 @@
 		F57AB44624E420FA003B3757 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				F52735BD24E48AAB00514168 /* ttrt.png */,
 				F52735B924E44CBF00514168 /* cross.png */,
 				F57AB45124E42D98003B3757 /* gbg.jpg */,
+				F52735BB24E488F000514168 /* tic-tac-toe-hand-drawn-game.png */,
 				F57AB44724E42150003B3757 /* board.jpg */,
 				F57AB44924E42150003B3757 /* logbg.jpg */,
 				F57AB44A24E42150003B3757 /* nought.png */,
@@ -166,6 +172,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F52735BA24E44CBF00514168 /* cross.png in Resources */,
+				F52735BE24E48AAB00514168 /* ttrt.png in Resources */,
+				F52735BC24E488F000514168 /* tic-tac-toe-hand-drawn-game.png in Resources */,
 				F57AB45224E42D98003B3757 /* gbg.jpg in Resources */,
 				F57AB44E24E42150003B3757 /* nought.png in Resources */,
 				F57AB44D24E42150003B3757 /* logbg.jpg in Resources */,

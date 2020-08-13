@@ -19,6 +19,16 @@ class BoardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        configureView()
+    }
+    
+    func configureView() {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.setToolbarHidden(true, animated: true)
         result_lbl.isHidden = true
     }
     

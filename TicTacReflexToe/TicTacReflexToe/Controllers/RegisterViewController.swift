@@ -1,5 +1,5 @@
 //
-//  LogViewController.swift
+//  RegisterViewController.swift
 //  TicTacReflexToe
 //
 //  Created by otet_tud on 8/12/20.
@@ -8,15 +8,23 @@
 
 import UIKit
 
-class LogViewController: UIViewController {
+class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        self.navigationController?.setToolbarHidden(true, animated: true)
+        configureView()
+        // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        configureView()
+    }
+    
+    func configureView() {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.setToolbarHidden(true, animated: true)
+        self.navigationItem.hidesBackButton = false
+    }
 
     /*
     // MARK: - Navigation

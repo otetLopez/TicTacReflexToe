@@ -24,6 +24,7 @@
 		F57AB44E24E42150003B3757 /* nought.png in Resources */ = {isa = PBXBuildFile; fileRef = F57AB44A24E42150003B3757 /* nought.png */; };
 		F57AB45224E42D98003B3757 /* gbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F57AB45124E42D98003B3757 /* gbg.jpg */; };
 		F57AB45624E443AE003B3757 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57AB45524E443AE003B3757 /* BoardViewController.swift */; };
+		F59EF95C24E4EBCF00757171 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59EF95B24E4EBCF00757171 /* InternetConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		F57AB44A24E42150003B3757 /* nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nought.png; sourceTree = "<group>"; };
 		F57AB45124E42D98003B3757 /* gbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gbg.jpg; sourceTree = "<group>"; };
 		F57AB45524E443AE003B3757 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		F59EF95B24E4EBCF00757171 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		F57AB42424E33F2B003B3757 /* TicTacReflexToe */ = {
 			isa = PBXGroup;
 			children = (
+				F59EF95A24E4EBA500757171 /* Classes */,
 				F57AB44624E420FA003B3757 /* Assets */,
 				F57AB43C24E41F2D003B3757 /* Controllers */,
 				F57AB42524E33F2B003B3757 /* AppDelegate.swift */,
@@ -114,6 +117,14 @@
 				F57AB44A24E42150003B3757 /* nought.png */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		F59EF95A24E4EBA500757171 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F59EF95B24E4EBCF00757171 /* InternetConnection.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 				F52735C024E4CBEE00514168 /* DashboardViewController.swift in Sources */,
 				F52735C224E4D11A00514168 /* RegisterViewController.swift in Sources */,
 				F57AB44224E42042003B3757 /* LogViewController.swift in Sources */,
+				F59EF95C24E4EBCF00757171 /* InternetConnection.swift in Sources */,
 				F57AB43024E33F2B003B3757 /* TicTacReflexToe.xcdatamodeld in Sources */,
 				F57AB42824E33F2B003B3757 /* SceneDelegate.swift in Sources */,
 				F57AB45624E443AE003B3757 /* BoardViewController.swift in Sources */,

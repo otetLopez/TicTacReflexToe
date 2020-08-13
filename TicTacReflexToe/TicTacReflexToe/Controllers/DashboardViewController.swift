@@ -12,11 +12,13 @@ class DashboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("DashboardViewController: viewDidLoad")
         configureView()
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("DashboardViewController: viewWillAppear")
         configureView()
     }
     func configureView() {

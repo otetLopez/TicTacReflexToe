@@ -49,7 +49,8 @@
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
-                                    <segue destination="JNG-Q4-H6i" kind="show" id="vn1-hY-GfO"/>
+                                    <action selector="logInBtnPressed:" destination="cnJ-60-ghe" eventType="touchUpInside" id="V51-bA-1oy"/>
+                                    <segue destination="JNG-Q4-H6i" kind="show" identifier="loginSuccess" id="vn1-hY-GfO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ic6-4I-wOr">
@@ -132,6 +133,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="C9s-VN-qpA"/>
                     <connections>
+                        <outlet property="logInBtn" destination="zlI-aQ-dt3" id="g9V-6L-znR"/>
                         <outlet property="tf_pwd" destination="09h-fj-VuM" id="cSu-CC-3XY"/>
                         <outlet property="tf_uname" destination="nRd-eW-LmB" id="Zmg-yQ-k3a"/>
                     </connections>

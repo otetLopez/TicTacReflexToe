@@ -12,6 +12,8 @@ class LogViewController: UIViewController {
 
     @IBOutlet weak var tf_uname: UITextField!
     @IBOutlet weak var tf_pwd: UITextField!
+    @IBOutlet weak var logInBtn: UIButton!
+    var logFlag : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +28,17 @@ class LogViewController: UIViewController {
     }
     
     func configureView() {
+        logFlag = false
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.navigationController?.setToolbarHidden(true, animated: true)
         clearFields()
+        logInBtn.layer.cornerRadius = 10
+        tf_uname.layer.borderWidth = 0
+        tf_uname.layer.cornerRadius = 10
+        tf_uname.text = ""
+        tf_pwd.layer.borderWidth = 0
+        tf_pwd.layer.cornerRadius = 10
+        tf_pwd.text = ""
     }
 
     @objc func viewTapped() {
@@ -40,5 +50,49 @@ class LogViewController: UIViewController {
         tf_uname.text = ""
         tf_pwd.text = ""
     }
+    
+    func checkFields() -> Bool {
+        if tf_uname.text!.isEmpty || tf_pwd.text!.isEmpty {
+            if tf_uname.text!.isEmpty {
+                tf_uname.layer.borderWidth = 1
+                tf_uname.layer.borderColor = UIColor.red.cgColor
+            } else {
+                tf_uname.layer.borderWidth = 0
+            }
+            
+            if tf_pwd.text!.isEmpty {
+                tf_pwd.layer.borderWidth = 1
+                tf_pwd.layer.borderColor = UIColor.red.cgColor
+            } else {
+                tf_pwd.layer.borderWidth = 0
+            }
+            return false
+        }
+        return true
+    }
 
+    @IBAction func logInBtnPressed(_ sender: Any) {
+        if(!checkFields()) {
+                let alertController = UIAlertController(title: "Error: ", message: "Missing mandatory fields", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+        } else {
+            //Should check internet
+            //Should check credentials
+            //Allow Segue
+            logFlag = true
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        print("Performing Segue")
+        var rc : Bool = false
+        if(identifier == "loginSuccess") {
+            if logFlag == true {
+                rc = true
+                logFlag = false
+            }
+        } else { rc = true }
+        return rc
+    }
 }

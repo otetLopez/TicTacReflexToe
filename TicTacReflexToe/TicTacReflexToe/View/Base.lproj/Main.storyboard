@@ -268,16 +268,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7Y-U0-515">
-                                <rect key="frame" x="138" y="458" width="79" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Play Offline"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gbg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fxi-yb-zXu">
+                                <rect key="frame" x="0.0" y="140" width="414" height="772"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJ7-v6-DIe">
+                                <rect key="frame" x="157.66666666666666" y="370" width="99.999999999999972" height="100"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="hvy-Rf-6Ye"/>
+                                    <constraint firstAttribute="width" constant="100" id="tZe-wz-GLY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                <state key="normal" title="Offline Mode" image="offline.png"/>
                                 <connections>
-                                    <segue destination="K5e-Hi-9tP" kind="show" id="fkx-kV-Ytn"/>
+                                    <segue destination="K5e-Hi-9tP" kind="show" id="MkS-2a-1hF"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MH9-De-8Jw">
+                                <rect key="frame" x="157.66666666666666" y="500" width="99.999999999999972" height="100"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="djB-ls-RaB"/>
+                                    <constraint firstAttribute="height" constant="100" id="ou9-uG-Dkn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                <state key="normal" title="Profile" image="profile-user.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uL-QE-Kaf">
+                                <rect key="frame" x="157.66666666666666" y="240" width="99.999999999999972" height="100"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="fZ7-Ef-iYV"/>
+                                    <constraint firstAttribute="height" constant="100" id="fze-mv-KfE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Online Mode" image="online.png"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6uL-QE-Kaf" firstAttribute="centerX" secondItem="Rwo-eD-W6E" secondAttribute="centerX" constant="0.5" id="0VU-vH-gBz"/>
+                            <constraint firstItem="fxi-yb-zXu" firstAttribute="top" secondItem="r6T-9J-IDQ" secondAttribute="top" id="21b-l8-1m0"/>
+                            <constraint firstItem="r6T-9J-IDQ" firstAttribute="trailing" secondItem="fxi-yb-zXu" secondAttribute="trailing" id="AzE-LQ-4M6"/>
+                            <constraint firstItem="MH9-De-8Jw" firstAttribute="top" secondItem="wJ7-v6-DIe" secondAttribute="bottom" constant="30" id="HYY-QL-jY0"/>
+                            <constraint firstItem="wJ7-v6-DIe" firstAttribute="centerX" secondItem="Rwo-eD-W6E" secondAttribute="centerX" constant="0.5" id="TQX-O4-1rs"/>
+                            <constraint firstItem="wJ7-v6-DIe" firstAttribute="top" secondItem="6uL-QE-Kaf" secondAttribute="bottom" constant="30" id="VUE-BC-v53"/>
+                            <constraint firstItem="r6T-9J-IDQ" firstAttribute="bottom" secondItem="fxi-yb-zXu" secondAttribute="bottom" constant="-50" id="bKt-B1-uGo"/>
+                            <constraint firstItem="6uL-QE-Kaf" firstAttribute="top" secondItem="r6T-9J-IDQ" secondAttribute="top" constant="100" id="hL3-8J-l1C"/>
+                            <constraint firstItem="fxi-yb-zXu" firstAttribute="leading" secondItem="r6T-9J-IDQ" secondAttribute="leading" id="kPA-4z-AQh"/>
+                            <constraint firstItem="MH9-De-8Jw" firstAttribute="centerX" secondItem="Rwo-eD-W6E" secondAttribute="centerX" constant="0.5" id="o4p-43-ibu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="r6T-9J-IDQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="g2R-cO-Sog"/>
@@ -512,6 +557,9 @@
         <image name="board.jpg" width="267.83999633789062" height="281.8800048828125"/>
         <image name="gbg.jpg" width="1736.699951171875" height="1204.800048828125"/>
         <image name="logbg.jpg" width="469.5" height="312.75"/>
+        <image name="offline.png" width="396.3870849609375" height="396.3870849609375"/>
+        <image name="online.png" width="36.176643371582031" height="36.176643371582031"/>
+        <image name="profile-user.png" width="36.426876068115234" height="36.426876068115234"/>
         <image name="ttrt.png" width="150.46530151367188" height="150.46530151367188"/>
     </resources>
 </document>

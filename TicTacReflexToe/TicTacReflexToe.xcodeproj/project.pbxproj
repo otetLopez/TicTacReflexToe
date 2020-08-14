@@ -26,6 +26,9 @@
 		F57AB45624E443AE003B3757 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57AB45524E443AE003B3757 /* BoardViewController.swift */; };
 		F59EF95C24E4EBCF00757171 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59EF95B24E4EBCF00757171 /* InternetConnection.swift */; };
 		F59EF95E24E6E91200757171 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59EF95D24E6E91200757171 /* User.swift */; };
+		F59EF96224E709EF00757171 /* offline.png in Resources */ = {isa = PBXBuildFile; fileRef = F59EF96024E709EE00757171 /* offline.png */; };
+		F59EF96324E709EF00757171 /* profile-user.png in Resources */ = {isa = PBXBuildFile; fileRef = F59EF96124E709EE00757171 /* profile-user.png */; };
+		F59EF96524E70E8400757171 /* online.png in Resources */ = {isa = PBXBuildFile; fileRef = F59EF96424E70E8400757171 /* online.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		F57AB45524E443AE003B3757 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		F59EF95B24E4EBCF00757171 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
 		F59EF95D24E6E91200757171 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F59EF96024E709EE00757171 /* offline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = offline.png; sourceTree = "<group>"; };
+		F59EF96124E709EE00757171 /* profile-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-user.png"; sourceTree = "<group>"; };
+		F59EF96424E70E8400757171 /* online.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = online.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,9 @@
 		F57AB44624E420FA003B3757 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				F59EF96424E70E8400757171 /* online.png */,
+				F59EF96024E709EE00757171 /* offline.png */,
+				F59EF96124E709EE00757171 /* profile-user.png */,
 				F52735BD24E48AAB00514168 /* ttrt.png */,
 				F52735B924E44CBF00514168 /* cross.png */,
 				F57AB45124E42D98003B3757 /* gbg.jpg */,
@@ -196,6 +205,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F59EF96324E709EF00757171 /* profile-user.png in Resources */,
+				F59EF96524E70E8400757171 /* online.png in Resources */,
 				F52735BA24E44CBF00514168 /* cross.png in Resources */,
 				F52735BE24E48AAB00514168 /* ttrt.png in Resources */,
 				F52735BC24E488F000514168 /* tic-tac-toe-hand-drawn-game.png in Resources */,
@@ -204,6 +215,7 @@
 				F57AB44D24E42150003B3757 /* logbg.jpg in Resources */,
 				F57AB44B24E42150003B3757 /* board.jpg in Resources */,
 				F57AB43524E33F2D003B3757 /* LaunchScreen.storyboard in Resources */,
+				F59EF96224E709EF00757171 /* offline.png in Resources */,
 				F57AB43224E33F2D003B3757 /* Assets.xcassets in Resources */,
 				F57AB42D24E33F2B003B3757 /* Main.storyboard in Resources */,
 			);

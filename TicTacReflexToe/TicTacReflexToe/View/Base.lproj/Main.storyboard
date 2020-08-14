@@ -309,6 +309,9 @@
                                 <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
                                 <state key="normal" title="Online Mode" image="online.png"/>
+                                <connections>
+                                    <segue destination="kE5-g1-LwM" kind="show" id="uSY-9e-z0g"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -552,6 +555,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="VDH-tn-Skm"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2IF-zn-Wwa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6s-ht-0w9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

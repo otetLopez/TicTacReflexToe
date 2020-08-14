@@ -10,6 +10,9 @@ import UIKit
 
 class DashboardViewController: UIViewController {
 
+    @IBOutlet weak var btn_online: UIButton!
+    @IBOutlet weak var btn_offline: UIButton!
+    @IBOutlet weak var btn_profile: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         print("DashboardViewController: viewDidLoad")
@@ -24,6 +27,11 @@ class DashboardViewController: UIViewController {
     func configureView() {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationItem.hidesBackButton = true
+        
+        btn_online.layer.cornerRadius = 10
+        btn_offline.layer.cornerRadius = 10
+        btn_profile.layer.cornerRadius = 10
+        
     }
 
     /*

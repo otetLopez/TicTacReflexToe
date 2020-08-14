@@ -49,7 +49,7 @@ class RegisterViewController: UIViewController {
     @IBAction func save_btn_pressed(_ sender: UIButton) {
         if(checkFields()) {
             // Create new user
-            
+            registerUser()
         }
     }
 
@@ -67,6 +67,15 @@ class RegisterViewController: UIViewController {
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    func registerUser(){
+        let newUser = User(uname: tf_uname.text!, eadd: tf_email.text!, pwd: tf_pwd.text!)
+        //TODO
+        //check internet
+        //send details to firebase
+        completeRegistration()
+    }
+    
     
     func cancelRegistration() {
         clearFields()
@@ -146,10 +155,32 @@ class RegisterViewController: UIViewController {
         return isPwdValid
     }
     
+    func completeRegistration() {
+        clearFields()
+        showToastMsg(msg: "Registration Successful!", done: true, seconds: 2)
+    }
+    
+    func notifyRegistrationError() {
+        showToastMsg(msg: "Regitration Not Successful.  Make sure email is not taken", done: false, seconds: 3)
+    }
+    
     func alertErrors(msg: String) {
         let alertController = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func showToastMsg(msg: String, done: Bool, seconds: Double) {
+        let alertController = UIAlertController(title: nil, message: msg, preferredStyle: .alert)
+        alertController.view.alpha = 0.5
+        alertController.view.layer.cornerRadius = 15
+        
+        self.present(alertController, animated: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
+            alertController.dismiss(animated: true)
+            if(done == true) { self.navigationController?.popToRootViewController(animated: true) }
+        }
     }
     
 }

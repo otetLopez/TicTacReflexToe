@@ -248,6 +248,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="orf-Vs-kFP"/>
                     <connections>
+                        <outlet property="cancelBtn" destination="b62-8m-6KJ" id="lfg-fH-zDv"/>
+                        <outlet property="saveBtn" destination="Y7k-fP-aN4" id="tdj-zb-bu9"/>
                         <outlet property="tf_cpwd" destination="awF-mg-wu5" id="xnY-px-Clt"/>
                         <outlet property="tf_email" destination="QdH-2l-Gaz" id="aIg-n6-wM3"/>
                         <outlet property="tf_pwd" destination="vTc-aK-MIf" id="wZp-cS-Xb6"/>

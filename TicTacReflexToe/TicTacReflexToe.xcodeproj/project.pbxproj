@@ -25,6 +25,7 @@
 		F57AB45224E42D98003B3757 /* gbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F57AB45124E42D98003B3757 /* gbg.jpg */; };
 		F57AB45624E443AE003B3757 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57AB45524E443AE003B3757 /* BoardViewController.swift */; };
 		F59EF95C24E4EBCF00757171 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59EF95B24E4EBCF00757171 /* InternetConnection.swift */; };
+		F59EF95E24E6E91200757171 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59EF95D24E6E91200757171 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		F57AB45124E42D98003B3757 /* gbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gbg.jpg; sourceTree = "<group>"; };
 		F57AB45524E443AE003B3757 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		F59EF95B24E4EBCF00757171 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
+		F59EF95D24E6E91200757171 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				F59EF95B24E4EBCF00757171 /* InternetConnection.swift */,
+				F59EF95D24E6E91200757171 /* User.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				F52735C224E4D11A00514168 /* RegisterViewController.swift in Sources */,
 				F57AB44224E42042003B3757 /* LogViewController.swift in Sources */,
 				F59EF95C24E4EBCF00757171 /* InternetConnection.swift in Sources */,
+				F59EF95E24E6E91200757171 /* User.swift in Sources */,
 				F57AB43024E33F2B003B3757 /* TicTacReflexToe.xcdatamodeld in Sources */,
 				F57AB42824E33F2B003B3757 /* SceneDelegate.swift in Sources */,
 				F57AB45624E443AE003B3757 /* BoardViewController.swift in Sources */,

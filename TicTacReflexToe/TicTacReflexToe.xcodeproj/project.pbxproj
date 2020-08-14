@@ -82,12 +82,12 @@
 		F57AB42424E33F2B003B3757 /* TicTacReflexToe */ = {
 			isa = PBXGroup;
 			children = (
+				F59EF95F24E6F1BC00757171 /* View */,
 				F59EF95A24E4EBA500757171 /* Classes */,
 				F57AB44624E420FA003B3757 /* Assets */,
 				F57AB43C24E41F2D003B3757 /* Controllers */,
 				F57AB42524E33F2B003B3757 /* AppDelegate.swift */,
 				F57AB42724E33F2B003B3757 /* SceneDelegate.swift */,
-				F57AB42B24E33F2B003B3757 /* Main.storyboard */,
 				F57AB43124E33F2D003B3757 /* Assets.xcassets */,
 				F57AB43324E33F2D003B3757 /* LaunchScreen.storyboard */,
 				F57AB43624E33F2D003B3757 /* Info.plist */,
@@ -128,6 +128,14 @@
 				F59EF95D24E6E91200757171 /* User.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		F59EF95F24E6F1BC00757171 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F57AB42B24E33F2B003B3757 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

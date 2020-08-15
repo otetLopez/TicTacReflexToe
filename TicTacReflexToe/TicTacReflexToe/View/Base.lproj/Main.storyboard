@@ -540,6 +540,7 @@
                         <barButtonItem key="backBarButtonItem" title="Dashboard" id="iGt-ME-Zn4"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="board_img" destination="RIc-FR-ROI" id="gw1-3N-xgE"/>
                         <outlet property="reset_btn" destination="dbe-ZU-92U" id="nr1-N9-0Dc"/>
                         <outlet property="result_lbl" destination="NYa-wz-Ifu" id="Ups-R0-HaI"/>
                     </connections>

@@ -16,6 +16,7 @@ class BoardViewController: UIViewController {
     
     @IBOutlet weak var reset_btn: UIButton!
     @IBOutlet weak var result_lbl: UILabel!
+    @IBOutlet weak var board_img: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class BoardViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationController?.setToolbarHidden(true, animated: true)
         result_lbl.isHidden = true
+        board_img.layer.cornerRadius = 10
     }
     
     @IBAction func btn_move(_ sender: UIButton) {

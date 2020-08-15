@@ -297,6 +297,9 @@
                                 <inset key="titleEdgeInsets" minX="-60" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
                                 <state key="normal" title="Profile" image="profile-user.png"/>
+                                <connections>
+                                    <segue destination="1R3-RE-K6y" kind="show" id="xDr-e2-6P8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uL-QE-Kaf">
                                 <rect key="frame" x="157.66666666666666" y="240" width="99.999999999999972" height="100"/>
@@ -543,7 +546,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nK-No-StA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3366.666666666667" y="845.75892857142856"/>
+            <point key="canvasLocation" x="3428" y="131"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CNM-4a-3EN">
+            <objects>
+                <viewController id="1R3-RE-K6y" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k15-Sc-4G3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gbg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Doo-UZ-ImO">
+                                <rect key="frame" x="0.0" y="140" width="414" height="772"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Doo-UZ-ImO" firstAttribute="top" secondItem="HwV-mr-zCt" secondAttribute="top" id="46m-Yj-BhP"/>
+                            <constraint firstItem="HwV-mr-zCt" firstAttribute="bottom" secondItem="Doo-UZ-ImO" secondAttribute="bottom" constant="-50" id="8oh-Ok-B1L"/>
+                            <constraint firstItem="HwV-mr-zCt" firstAttribute="trailing" secondItem="Doo-UZ-ImO" secondAttribute="trailing" id="bcL-0A-ydR"/>
+                            <constraint firstItem="Doo-UZ-ImO" firstAttribute="leading" secondItem="HwV-mr-zCt" secondAttribute="leading" id="fWJ-pM-JH5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HwV-mr-zCt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PLG-MY-tPp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1sN-2J-q28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3428" y="846"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HUT-da-R2l">
@@ -552,14 +582,25 @@
                     <view key="view" contentMode="scaleToFill" id="TUn-fY-exA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gbg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="e6D-17-97T">
+                                <rect key="frame" x="0.0" y="140" width="414" height="772"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e6D-17-97T" firstAttribute="leading" secondItem="VDH-tn-Skm" secondAttribute="leading" id="EVx-pV-nW2"/>
+                            <constraint firstItem="e6D-17-97T" firstAttribute="trailing" secondItem="VDH-tn-Skm" secondAttribute="trailing" id="SE0-WI-nj5"/>
+                            <constraint firstItem="e6D-17-97T" firstAttribute="top" secondItem="VDH-tn-Skm" secondAttribute="top" id="WEi-fr-uWL"/>
+                            <constraint firstItem="VDH-tn-Skm" firstAttribute="bottom" secondItem="e6D-17-97T" secondAttribute="bottom" constant="-50" id="XY1-HH-T0l"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VDH-tn-Skm"/>
                     </view>
                     <navigationItem key="navigationItem" id="2IF-zn-Wwa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6s-ht-0w9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3367" y="117"/>
+            <point key="canvasLocation" x="3428" y="-583"/>
         </scene>
     </scenes>
     <resources>

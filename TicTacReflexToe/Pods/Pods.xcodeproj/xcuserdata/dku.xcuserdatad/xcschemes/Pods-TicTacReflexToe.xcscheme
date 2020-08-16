@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E8F3615D3FA8A2AA2E1FFD1362B68C0A"
+               BlueprintIdentifier = "7812918E204274AC60393BB9F92EF32E"
                BuildableName = "Pods_TicTacReflexToe.framework"
                BlueprintName = "Pods-TicTacReflexToe"
                ReferencedContainer = "container:Pods.xcodeproj">

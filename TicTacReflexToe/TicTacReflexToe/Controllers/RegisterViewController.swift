@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
     @IBOutlet weak var tf_uname: UITextField!
@@ -48,8 +49,11 @@ class RegisterViewController: UIViewController {
 
     @IBAction func save_btn_pressed(_ sender: UIButton) {
         if(checkFields()) {
-            // Create new user
-            registerUser()
+            if(isPasswordValid()){
+                 // Create new user
+                 registerUser()
+            }
+
         }
     }
 
@@ -69,11 +73,39 @@ class RegisterViewController: UIViewController {
     }
     
     func registerUser(){
-        let newUser = User(uname: tf_uname.text!, eadd: tf_email.text!, pwd: tf_pwd.text!)
+         print("\(self.tf_email.text!)  print");
+      //  let newUser = User(uname: tf_uname.text!, eadd: tf_email.text!, pwd: tf_pwd.text!)
         //TODO
         //check internet
         //send details to firebase
-        completeRegistration()
+        
+        let ref : DatabaseReference! = Database.database().reference();
+        Auth.auth().createUser(withEmail: tf_email.text!, password: tf_pwd.text!, completion: { (user, error) in
+                         
+            if((error) != nil) {
+                self.alertErrors(msg: "\(error?.localizedDescription ?? "Unknown Error!")")
+                print("Error is = \(error?.localizedDescription ?? "")")
+                         
+            }
+                         
+            else{
+               
+                ref.child("users").child((user?.user.uid)!).setValue(["Email": self.tf_email.text!, "Username": self.tf_uname.text! , "Point": 0 ])
+
+                          
+                ref.child("users").child((user?.user.uid)!).observeSingleEvent(of: .value, with: { snapshot in
+
+                    self.completeRegistration()
+                  
+                    let postDict = snapshot.value as! [String : AnyObject]
+                                  print("Post Error is = \(postDict)")
+
+                })
+  
+            }
+        })
+        
+       
     }
     
     

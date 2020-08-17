@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class LogViewController: UIViewController {
 
     @IBOutlet weak var tf_uname: UITextField!
     @IBOutlet weak var tf_pwd: UITextField!
     @IBOutlet weak var logInBtn: UIButton!
-    var logFlag : Bool = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class LogViewController: UIViewController {
     }
     
     func configureView() {
-        logFlag = false
+        
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.navigationController?.setToolbarHidden(true, animated: true)
         clearFields()
@@ -80,19 +81,29 @@ class LogViewController: UIViewController {
             //Should check internet
             //Should check credentials
             //Allow Segue
-            logFlag = true
+            Auth.auth().signIn(withEmail: self.tf_uname.text!, password: self.tf_pwd.text!) { (user, error) in
+                
+                if(error != nil){
+                    self.alertErrors(msg: error?.localizedDescription ?? "Unknown Error");
+                }
+                
+                else{
+                
+                    self.performSegue(withIdentifier: "loginSuccess", sender: nil);
+                    
+                }
+            
+            }
+        
         }
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        print("Performing Segue")
-        var rc : Bool = false
-        if(identifier == "loginSuccess") {
-            if logFlag == true {
-                rc = true
-                logFlag = false
-            }
-        } else { rc = true }
-        return rc
-    }
+
+
+    
+    func alertErrors(msg: String) {
+           let alertController = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
+           alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+           self.present(alertController, animated: true, completion: nil)
+       }
 }

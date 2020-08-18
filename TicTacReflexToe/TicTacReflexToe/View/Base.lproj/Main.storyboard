@@ -341,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cZ-KO-frB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2222" y="117"/>
+            <point key="canvasLocation" x="2238" y="246"/>
         </scene>
         <!--Offline Mode-->
         <scene sceneID="o71-lw-kgC">
@@ -541,13 +541,34 @@
                     </navigationItem>
                     <connections>
                         <outlet property="board_img" destination="RIc-FR-ROI" id="gw1-3N-xgE"/>
+                        <outlet property="reflexView" destination="QdN-CH-nOQ" id="hKf-ar-W8b"/>
                         <outlet property="reset_btn" destination="dbe-ZU-92U" id="nr1-N9-0Dc"/>
                         <outlet property="result_lbl" destination="NYa-wz-Ifu" id="Ups-R0-HaI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nK-No-StA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QdN-CH-nOQ">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMw-Z4-ddj">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                            <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="subViewReflexButton:" destination="K5e-Hi-9tP" eventType="touchUpInside" id="9tf-az-bMC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="JMw-Z4-ddj" firstAttribute="leading" secondItem="QdN-CH-nOQ" secondAttribute="leading" id="0Yp-Vf-NZ0"/>
+                        <constraint firstAttribute="bottom" secondItem="JMw-Z4-ddj" secondAttribute="bottom" id="80n-hd-a05"/>
+                        <constraint firstAttribute="trailing" secondItem="JMw-Z4-ddj" secondAttribute="trailing" id="MGt-sW-TWS"/>
+                        <constraint firstItem="JMw-Z4-ddj" firstAttribute="top" secondItem="QdN-CH-nOQ" secondAttribute="top" id="jsV-OD-fWi"/>
+                    </constraints>
+                </view>
             </objects>
-            <point key="canvasLocation" x="3428" y="131"/>
+            <point key="canvasLocation" x="3428" y="246"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="CNM-4a-3EN">

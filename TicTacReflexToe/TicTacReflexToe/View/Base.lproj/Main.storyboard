@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KMh-yn-AZk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KMh-yn-AZk">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -341,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cZ-KO-frB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2238" y="246"/>
+            <point key="canvasLocation" x="2223" y="117"/>
         </scene>
         <!--Offline Mode-->
         <scene sceneID="o71-lw-kgC">
@@ -568,12 +568,12 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="3428" y="246"/>
+            <point key="canvasLocation" x="3428" y="117"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="CNM-4a-3EN">
             <objects>
-                <viewController id="1R3-RE-K6y" sceneMemberID="viewController">
+                <viewController id="1R3-RE-K6y" customClass="ProfileViewController" customModule="TicTacReflexToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k15-Sc-4G3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -581,17 +581,75 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gbg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Doo-UZ-ImO">
                                 <rect key="frame" x="0.0" y="140" width="414" height="772"/>
                             </imageView>
+                            <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Os9-Yx-0Ad">
+                                <rect key="frame" x="50" y="319.66666666666669" width="314" height="22.666666666666686"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.3982769692" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <size key="titleShadowOffset" width="-1" height="0.0"/>
+                                <state key="normal" title="Email Address: " image="envelope.open.fill" catalog="system"/>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9c-pH-WXF">
+                                <rect key="frame" x="50" y="352.33333333333331" width="314" height="21"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.3982769692" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <size key="titleShadowOffset" width="-1" height="0.0"/>
+                                <state key="normal" title="Points: " image="star.fill" catalog="system"/>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZF-Q2-Fx5">
+                                <rect key="frame" x="50" y="290" width="314" height="19.666666666666686"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.3982769691780822" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Username: " image="person.fill" catalog="system"/>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jS4-MR-bRr">
+                                <rect key="frame" x="50" y="423.33333333333331" width="314" height="21"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="16"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <size key="titleShadowOffset" width="-1" height="0.0"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signout_btn_pressed:" destination="1R3-RE-K6y" eventType="touchUpInside" id="Ujh-zf-CYC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="qZF-Q2-Fx5" firstAttribute="top" secondItem="HwV-mr-zCt" secondAttribute="top" constant="150" id="0sT-mA-axK"/>
+                            <constraint firstItem="qZF-Q2-Fx5" firstAttribute="leading" secondItem="HwV-mr-zCt" secondAttribute="leading" constant="50" id="3zR-We-bxx"/>
                             <constraint firstItem="Doo-UZ-ImO" firstAttribute="top" secondItem="HwV-mr-zCt" secondAttribute="top" id="46m-Yj-BhP"/>
                             <constraint firstItem="HwV-mr-zCt" firstAttribute="bottom" secondItem="Doo-UZ-ImO" secondAttribute="bottom" constant="-50" id="8oh-Ok-B1L"/>
+                            <constraint firstItem="F9c-pH-WXF" firstAttribute="leading" secondItem="HwV-mr-zCt" secondAttribute="leading" constant="50" id="9UD-3e-1Us"/>
+                            <constraint firstItem="HwV-mr-zCt" firstAttribute="trailing" secondItem="F9c-pH-WXF" secondAttribute="trailing" constant="50" id="Dwh-NE-Rui"/>
+                            <constraint firstItem="F9c-pH-WXF" firstAttribute="top" secondItem="Os9-Yx-0Ad" secondAttribute="bottom" constant="10" id="Hsi-4z-qxR"/>
+                            <constraint firstItem="Os9-Yx-0Ad" firstAttribute="leading" secondItem="HwV-mr-zCt" secondAttribute="leading" constant="50" id="Ks2-Hh-XbN"/>
+                            <constraint firstItem="HwV-mr-zCt" firstAttribute="trailing" secondItem="jS4-MR-bRr" secondAttribute="trailing" constant="50" id="RDr-TH-6zH"/>
+                            <constraint firstItem="jS4-MR-bRr" firstAttribute="leading" secondItem="HwV-mr-zCt" secondAttribute="leading" constant="50" id="Zfd-RZ-dWa"/>
                             <constraint firstItem="HwV-mr-zCt" firstAttribute="trailing" secondItem="Doo-UZ-ImO" secondAttribute="trailing" id="bcL-0A-ydR"/>
                             <constraint firstItem="Doo-UZ-ImO" firstAttribute="leading" secondItem="HwV-mr-zCt" secondAttribute="leading" id="fWJ-pM-JH5"/>
+                            <constraint firstItem="jS4-MR-bRr" firstAttribute="top" secondItem="F9c-pH-WXF" secondAttribute="bottom" constant="50" id="ha3-jw-dbE"/>
+                            <constraint firstItem="Os9-Yx-0Ad" firstAttribute="top" secondItem="qZF-Q2-Fx5" secondAttribute="bottom" constant="10" id="vgm-le-Tbw"/>
+                            <constraint firstItem="HwV-mr-zCt" firstAttribute="trailing" secondItem="Os9-Yx-0Ad" secondAttribute="trailing" constant="50" id="wSJ-bf-a7x"/>
+                            <constraint firstItem="HwV-mr-zCt" firstAttribute="trailing" secondItem="qZF-Q2-Fx5" secondAttribute="trailing" constant="50" id="xer-Zm-042"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HwV-mr-zCt"/>
                     </view>
                     <navigationItem key="navigationItem" id="PLG-MY-tPp"/>
+                    <connections>
+                        <outlet property="eadd" destination="Os9-Yx-0Ad" id="r6z-Ev-vQf"/>
+                        <outlet property="score" destination="F9c-pH-WXF" id="XxK-Vh-YxS"/>
+                        <outlet property="uname" destination="qZF-Q2-Fx5" id="vue-cA-xae"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1sN-2J-q28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -626,13 +684,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="board.jpg" width="267.83999633789062" height="281.8800048828125"/>
+        <image name="envelope.open.fill" catalog="system" width="128" height="119"/>
         <image name="gbg.jpg" width="1736.699951171875" height="1204.800048828125"/>
         <image name="logbg.jpg" width="469.5" height="312.75"/>
         <image name="offline.png" width="396.3870849609375" height="396.3870849609375"/>
         <image name="online.png" width="36.176643371582031" height="36.176643371582031"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="profile-user.png" width="36.426876068115234" height="36.426876068115234"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="ttrt.png" width="150.46530151367188" height="150.46530151367188"/>
     </resources>
 </document>

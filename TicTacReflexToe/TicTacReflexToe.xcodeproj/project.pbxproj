@@ -14,6 +14,7 @@
 		F52735BE24E48AAB00514168 /* ttrt.png in Resources */ = {isa = PBXBuildFile; fileRef = F52735BD24E48AAB00514168 /* ttrt.png */; };
 		F52735C024E4CBEE00514168 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52735BF24E4CBEE00514168 /* DashboardViewController.swift */; };
 		F52735C224E4D11A00514168 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52735C124E4D11A00514168 /* RegisterViewController.swift */; };
+		F54660FF24ED60570055AA0F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54660FE24ED60570055AA0F /* ProfileViewController.swift */; };
 		F57AB42624E33F2B003B3757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57AB42524E33F2B003B3757 /* AppDelegate.swift */; };
 		F57AB42824E33F2B003B3757 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57AB42724E33F2B003B3757 /* SceneDelegate.swift */; };
 		F57AB42D24E33F2B003B3757 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F57AB42B24E33F2B003B3757 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		F52735BD24E48AAB00514168 /* ttrt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ttrt.png; sourceTree = "<group>"; };
 		F52735BF24E4CBEE00514168 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F52735C124E4D11A00514168 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F54660FE24ED60570055AA0F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F57AB42224E33F2B003B3757 /* TicTacReflexToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacReflexToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F57AB42524E33F2B003B3757 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F57AB42724E33F2B003B3757 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				F57AB45524E443AE003B3757 /* BoardViewController.swift */,
 				F52735BF24E4CBEE00514168 /* DashboardViewController.swift */,
 				F52735C124E4D11A00514168 /* RegisterViewController.swift */,
+				F54660FE24ED60570055AA0F /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			files = (
 				F57AB42624E33F2B003B3757 /* AppDelegate.swift in Sources */,
 				F52735C024E4CBEE00514168 /* DashboardViewController.swift in Sources */,
+				F54660FF24ED60570055AA0F /* ProfileViewController.swift in Sources */,
 				F52735C224E4D11A00514168 /* RegisterViewController.swift in Sources */,
 				F57AB44224E42042003B3757 /* LogViewController.swift in Sources */,
 				F59EF95C24E4EBCF00757171 /* InternetConnection.swift in Sources */,
@@ -457,7 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DU9AA66PTH;
+				DEVELOPMENT_TEAM = 2695693848;
 				INFOPLIST_FILE = TicTacReflexToe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -35,6 +35,7 @@ class ProfileViewController: UIViewController {
         eadd.layer.cornerRadius = 5
         score.layer.cornerRadius = 5
         outBtn.layer.cornerRadius = 5
+        outBtn.titleLabel?.textColor = UIColor.white
         
         retrieveData()
     }
@@ -67,16 +68,23 @@ class ProfileViewController: UIViewController {
     }
 
     @IBAction func signout_btn_pressed(_ sender: UIButton) {
-        print("ProfileViewController: signout_btn_pressed()")
+        let alertController = UIAlertController(title: "Logging Out", message: "Are you sure?", preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Yes", style: .default, handler: {
+            action in
+            self.signOut()
+        }))
+        self.present(alertController, animated: true, completion: nil)
+ 
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func signOut() {
+        do {
+            try  Auth.auth().signOut()
+            self.navigationController?.popToRootViewController(animated: true)
+        } catch let e as NSError {
+            print("Signing Out Error: \(e)")
+        }
     }
-    */
-
 }

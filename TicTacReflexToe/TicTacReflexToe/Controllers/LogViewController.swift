@@ -18,10 +18,13 @@ class LogViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        configureView()
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
         self.view.addGestureRecognizer(tapGesture)
+        
+        if(retrieveData()) {
+             self.performSegue(withIdentifier: "loginSuccess", sender: nil);
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,7 +32,6 @@ class LogViewController: UIViewController {
     }
     
     func configureView() {
-        
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.navigationController?.setToolbarHidden(true, animated: true)
         clearFields()
@@ -81,25 +83,31 @@ class LogViewController: UIViewController {
             //Should check internet
             //Should check credentials
             //Allow Segue
+            
+            //Check if user is already logged In
             Auth.auth().signIn(withEmail: self.tf_uname.text!, password: self.tf_pwd.text!) { (user, error) in
-                
                 if(error != nil){
                     self.alertErrors(msg: error?.localizedDescription ?? "Unknown Error");
                 }
-                
                 else{
-                
                     self.performSegue(withIdentifier: "loginSuccess", sender: nil);
-                    
                 }
             
             }
-        
         }
     }
     
 
-
+    func retrieveData() -> Bool {
+        let userID = (Auth.auth().currentUser?.uid) ?? "undefined";
+        print(userID)
+        
+        if(userID == "undefined") {
+            return false
+        }
+        
+        return true
+    }
     
     func alertErrors(msg: String) {
            let alertController = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)

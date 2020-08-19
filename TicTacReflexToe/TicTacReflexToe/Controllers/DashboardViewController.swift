@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class DashboardViewController: UIViewController {
 
@@ -22,6 +23,21 @@ class DashboardViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         print("DashboardViewController: viewWillAppear")
+        let ref : DatabaseReference! = Database.database().reference();
+        let userID : String = (Auth.auth().currentUser?.uid)!
+        print("Current user ID is" + userID)
+               
+        ref?.child("users").child(userID).observeSingleEvent(of: .value, with: {(snapshot) in
+        print(snapshot.value!)
+
+        let userEmail = (snapshot.value as! NSDictionary)["Email"] as! String
+        print(userEmail)
+            
+        let points = (snapshot.value as! NSDictionary)["Point"] as! String
+        print(points)
+        
+        })
+        
         configureView()
     }
     func configureView() {

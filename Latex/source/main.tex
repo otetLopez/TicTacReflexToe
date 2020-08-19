@@ -175,8 +175,8 @@ The very purpose of implementing \textbf{\emph{Tic Tac Reflex Toe}} is for the d
 
 % ****** MOCKUP ****** 
 \section{Use Cases}
-    \subsection{Flow}
-        Below figure is a mock up on how the application is designed to flow.\\ 
+    \subsection{Design}
+        Below figure is a mock up on how the application is designed.\\ 
         \begin{figure}[h]
         \centering
         \includegraphics[width=5in]{images/tictacreflexdiagram.png}
@@ -184,9 +184,9 @@ The very purpose of implementing \textbf{\emph{Tic Tac Reflex Toe}} is for the d
         \end{figure}
         ~\newline
         ~\newpage
-
-    \subsection{Design}
-        Below images shows the design plan of how the application should look in an IPhone device.\\
+    
+    \subsection{Layout}
+        Below images shows the layout plan of how the application should look in an IPhone device.\\
         ~\newline
         \textbf{Log In Controller}
         \begin{figure}[h]
@@ -201,11 +201,31 @@ The very purpose of implementing \textbf{\emph{Tic Tac Reflex Toe}} is for the d
         \includegraphics[width=2.5in]{images/board.png}
         \caption{Game Page in Iphone}
         \end{figure}
+        ~\newline
+        ~\newpage
         
+    \subsection{UI Prototype}
+        With the given layout, the pages will be designed as shown in below figure
+        \begin{figure}[h]
+        \centering
+        \includegraphics[width=5.5in]{images/Prototype.png}
+        \caption{UI Prototype}
+        \end{figure}
+        ~\newline
+        ~\newpage
 \newpage
 
 % ****** Project Plan ****** 
 \section{Project Plan}
+    \subsection{Work Breakdown Structure}
+    Below figure shows Work Breakdown Structure for the development of \textbf{\emph{Tic Tac Reflex Toe}}
+            \begin{figure}[h]
+            \centering
+            \includegraphics[width=5.5in]{images/Work Breakdown Structure.png}
+            \caption{Work Breakdown Structure}
+        \end{figure}
+        \\
+        ~\\
     \subsection{Timeline}
         This project is aimed to finish in time for project scheduled presentation, 24th of August 2020.\\\\
         \subsubsection{Sprint Timeline}
@@ -272,12 +292,163 @@ The very purpose of implementing \textbf{\emph{Tic Tac Reflex Toe}} is for the d
             \item IPhone X
             \end{itemize}
     \end{itemize}
-~\\
+\newpage
+\section{Implementation}
+\subsection{Sprint Retrospectives}
+    \subsubsection{Sprint 1}
+        \textbf{\emph{What Went Well.}}
+        \begin{itemize}
+            \item Design and environment setup finished ahead of time
+            \item Offline mode was done
+        \end{itemize}
+        \textbf{\emph{What Did Not Go Well.}}
+        \begin{itemize}
+            \item Some tasks are not finished but worked on the weekend instead
+        \end{itemize}
+        \textbf{\emph{What Needs Improvement.}}
+            \begin{itemize}
+                \item Task scheduling
+            \end{itemize}
+    \subsubsection{Sprint 2}
+        \textbf{\emph{What Went Well.}}
+        \begin{itemize}
+            \item Some tasks are completed as scheduled
+        \end{itemize}
+        \textbf{\emph{What Did Not Go Well.}}
+        \begin{itemize}
+            \item Schedules are tight and documentation is not taken to consideration in Sprint planning
+            \item MVP is not delivered
+        \end{itemize}
+        \textbf{\emph{What Needs Improvement.}}
+            \begin{itemize}
+                \item Task scheduling
+            \end{itemize}
+    \subsubsection{Sprint 3}
+\subsection{Tasks Hours}
+The following Gantt Chart shows comparison of projected hours estimated for a task and date it is scheduled to be implemented.  Although Sprint schedule was not religiously followed, the development is still a success since some tasks are developed ahead, and there are buffer days available like weekends.  
+\newpage
+\subsection{Implementation Functions}
+    \subsubsection{Database}
+    The database contains user class details.  User data is stored in Google Firebase.
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=3in]{images/TTRT.png}
+        \caption{User Class Diagram}
+        \end{figure}
+        \newpage   
+    \subsubsection{Log In}
+    Log In is a separate View Controller Class with the following available user inputs:
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=2in]{images/sim_log.png}
+        \caption{Actual Log In Page on XCode Simulator}
+        \end{figure}
+        \newline
+        \begin{itemize}
+            \item User Text Input - The user email used in the registration of the App
+            \item Password Text Input - Must be at least 6 digit.  Entry is secured
+            \item Log In Button - To confirm user log in
+            \item Sign Up Button - For new users to register a new account.  This will display Register Page Controller
+        \end{itemize}
+        \newpage
+    \subsubsection{Register}
+        Register Page is implemented in View Controller Class that handles user sign ups.  Field contents are checked to make sure all are filled and passwords matched to make sure on a successful registration.
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=2in]{images/sim_reg.png}
+        \caption{Actual Register Page on XCode Simulator}
+        \end{figure}
+        \newline
+        \begin{itemize}
+            \item User Name Text Input - User's username
+            \item User Email Text Input - The user email and this will be used as a log in credential
+            \item Password Text Input - Must be at least 6 digit.  Entry is secured
+            \item Confirm Password Text Input - Confirms password entered
+            \item Save Button - Confirms registration
+            \item Cancel Button - Cancels registration
+        \end{itemize}
+        \newpage
+    \subsubsection{Home Dashboard}
+        Home is a implemented using View Controller Class with three main buttons to traverse to different pages
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=2in]{images/sim_home.png}
+        \caption{Actual Home Page on XCode Simulator}
+        \end{figure}
+        \newline
+        \begin{itemize}
+            \item Online Mode Button - This option will let the user play in online mode
+            \item Offline Mode Button - This option will let the user play in offline mode
+            \item User Profile Button - This will display user profile information
+        \end{itemize}
+        \newpage
+    \subsubsection{Offline Game Mode}
+    This page is implemented using a View Controller class.  The offline mode gives the user the privilege to enjoy Tic Tac Reflex Toe offline with opponents that are physically present.  The points earned in this mode will not be counted to user over all points.  The bottom button allows the user to Reset the ongoing game or play again if the game finishes.
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=2in]{images/board.png}
+        \caption{Actual Offline Game Page on XCode Simulator}
+        \end{figure}  
+        \newpage
+    \subsubsection{Online Game Mode}
+    This is the main feature of the App.  This allows user to play Tic Tac Reflex to with  online opponents.
+    \subsubsection{User Profile}
+    This page is implemented using a View Controller class.  This displays user class information such as name, email, and score in a form of text fields.  A button is available to allow user to sign out.
+    
+\newpage
+\subsection{Definition of Done} This section shows the test results of the application functionality which concludes if it has function as planned.
+    \subsubsection{Installation}
+         \begin{figure}[h]
+            \centering
+            \includegraphics[width=5.5in]{images/test_1_install.png}
+        \caption{Installation Test Cases}
+        \end{figure}   
+    \subsubsection{Log In}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=5.5in]{images/test_2_log.png}
+        \caption{Log In Test Cases}
+        \end{figure}
+        \newpage
+    \subsubsection{Register}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=5.5in]{images/test_3_register.png}
+        \caption{Register Test Cases}
+        \end{figure}
+    \subsubsection{Home Dashboard}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=5.5in]{images/test_4_home.png}
+        \caption{Home Page Test Cases}
+        \end{figure}
+        \newpage
+    \subsubsection{Online Game Mode}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=5.5in]{images/test_5_online.png}
+        \caption{Online Game Mode Page Test Cases}
+        \end{figure}
+    \subsubsection{Offline Game Mode}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=5.5in]{images/test_6_offline.png}
+        \caption{Offline Game Mode Page Test Cases}
+        \end{figure}
+    \subsubsection{User Profile}
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=5.5in]{images/test_7_profile.png}
+        \caption{User Profile Page Test Cases}
+        \end{figure}
+    \newpage
 \section{Links}
 \begin{itemize}
-    \item Github Link  https://github.com/otetLopez/TicTacReflexToe
-    \item Google Site 
+    \item Github Link:  https://github.com/otetLopez/TicTacReflexToe
+    \item Google Site: 
     https://sites.google.com/view/tic-tac-reflex-toe/home
+    \item Latex Overleaf Link: 
+    https://www.overleaf.com/read/jvysgmwscznm
 \end{itemize}
 \newpage
 \section{Bibliography}

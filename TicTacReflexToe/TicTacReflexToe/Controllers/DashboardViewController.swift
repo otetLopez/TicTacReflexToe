@@ -33,7 +33,7 @@ class DashboardViewController: UIViewController {
         let userEmail = (snapshot.value as! NSDictionary)["Email"] as! String
         print(userEmail)
             
-        let points = (snapshot.value as! NSDictionary)["Point"] as! String
+        let points = (snapshot.value as! NSDictionary)["Point"] as! Int
         print(points)
         
         })

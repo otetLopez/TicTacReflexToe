@@ -570,7 +570,7 @@
             </objects>
             <point key="canvasLocation" x="3428" y="117"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--User Profile-->
         <scene sceneID="CNM-4a-3EN">
             <objects>
                 <viewController id="1R3-RE-K6y" customClass="ProfileViewController" customModule="TicTacReflexToe" customModuleProvider="target" sceneMemberID="viewController">
@@ -587,9 +587,11 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                 <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                 <size key="titleShadowOffset" width="-1" height="0.0"/>
-                                <state key="normal" title="Email Address: " image="envelope.open.fill" catalog="system"/>
+                                <state key="normal" image="envelope.open.fill" catalog="system">
+                                    <string key="title">Email Address:                                                                                                                                                                                                </string>
+                                </state>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9c-pH-WXF">
                                 <rect key="frame" x="50" y="352.33333333333331" width="314" height="21"/>
@@ -599,22 +601,23 @@
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <size key="titleShadowOffset" width="-1" height="0.0"/>
-                                <state key="normal" title="Points: " image="star.fill" catalog="system"/>
+                                <state key="normal" image="star.fill" catalog="system">
+                                    <string key="title">Points:                                                                                                                                          </string>
+                                </state>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZF-Q2-Fx5">
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZF-Q2-Fx5">
                                 <rect key="frame" x="50" y="290" width="314" height="19.666666666666686"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.3982769691780822" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
                                 <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Username: " image="person.fill" catalog="system"/>
+                                <state key="normal" title="Username:                                                                                                   " image="person.fill" catalog="system"/>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jS4-MR-bRr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jS4-MR-bRr">
                                 <rect key="frame" x="50" y="423.33333333333331" width="314" height="21"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="16"/>
-                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <size key="titleShadowOffset" width="-1" height="0.0"/>
                                 <state key="normal" title="Sign Out"/>
@@ -644,9 +647,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HwV-mr-zCt"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PLG-MY-tPp"/>
+                    <navigationItem key="navigationItem" title="User Profile" id="PLG-MY-tPp"/>
                     <connections>
                         <outlet property="eadd" destination="Os9-Yx-0Ad" id="r6z-Ev-vQf"/>
+                        <outlet property="outBtn" destination="jS4-MR-bRr" id="qSM-jd-zQz"/>
                         <outlet property="score" destination="F9c-pH-WXF" id="XxK-Vh-YxS"/>
                         <outlet property="uname" destination="qZF-Q2-Fx5" id="vue-cA-xae"/>
                     </connections>

@@ -41,7 +41,7 @@ class ProfileViewController: UIViewController {
     }
     
     func setUserInfo() {
-        eadd.titleLabel?.text = "Email Address: " + userEmail
+        eadd.titleLabel?.text = "Email: " + userEmail
         score.titleLabel?.text = "Points: \(points)"
         uname.titleLabel?.text = "Username: " + userName
     }

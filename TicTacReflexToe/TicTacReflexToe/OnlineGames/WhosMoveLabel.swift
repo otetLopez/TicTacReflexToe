@@ -41,7 +41,7 @@ class WhosMoveLabel: UILabel {
                     self.text = "You Win"
                     ref?.child("users").child(userID).observeSingleEvent(of: .value, with: {(snapshot) in
                     let points = (snapshot.value as! NSDictionary)["Point"] as! Int
-                    self.ref.child("users").child(userId).setValue(["Point": points+100 ])
+                    self.ref.child("users").child(userId).updateChildValues(["Point": points+100 ])
                     })
                    
                 }

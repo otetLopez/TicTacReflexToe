@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KMh-yn-AZk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KMh-yn-AZk">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -568,7 +568,7 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="3428" y="117"/>
+            <point key="canvasLocation" x="3006" y="185"/>
         </scene>
         <!--User Profile-->
         <scene sceneID="CNM-4a-3EN">
@@ -659,10 +659,10 @@
             </objects>
             <point key="canvasLocation" x="3428" y="846"/>
         </scene>
-        <!--View Controller-->
+        <!--Games List View Controller-->
         <scene sceneID="HUT-da-R2l">
             <objects>
-                <viewController id="kE5-g1-LwM" sceneMemberID="viewController">
+                <viewController id="kE5-g1-LwM" customClass="GamesListViewController" customModule="TicTacReflexToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TUn-fY-exA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -670,34 +670,277 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gbg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="e6D-17-97T">
                                 <rect key="frame" x="0.0" y="140" width="414" height="772"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0ao-8X-I5A">
+                                <rect key="frame" x="0.0" y="140" width="414" height="684"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" id="Sen-ap-ptg">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sen-ap-ptg" id="E2o-vG-2oJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8K-gO-WkG">
+                                <rect key="frame" x="8" y="832" width="398" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="13f-eW-BB0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Create New Room">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGameAction:" destination="kE5-g1-LwM" eventType="touchUpInside" id="vRq-gr-v5L"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="0ao-8X-I5A" firstAttribute="leading" secondItem="VDH-tn-Skm" secondAttribute="leading" id="2em-bl-3jD"/>
+                            <constraint firstItem="0ao-8X-I5A" firstAttribute="top" secondItem="VDH-tn-Skm" secondAttribute="top" id="6gh-Vq-3Wo"/>
+                            <constraint firstItem="w8K-gO-WkG" firstAttribute="top" secondItem="0ao-8X-I5A" secondAttribute="bottom" constant="8" id="8aj-G0-v4H"/>
+                            <constraint firstItem="VDH-tn-Skm" firstAttribute="bottom" secondItem="w8K-gO-WkG" secondAttribute="bottom" id="ETk-Dd-QYh"/>
                             <constraint firstItem="e6D-17-97T" firstAttribute="leading" secondItem="VDH-tn-Skm" secondAttribute="leading" id="EVx-pV-nW2"/>
+                            <constraint firstItem="0ao-8X-I5A" firstAttribute="trailing" secondItem="VDH-tn-Skm" secondAttribute="trailing" id="J2f-Z2-Kyx"/>
                             <constraint firstItem="e6D-17-97T" firstAttribute="trailing" secondItem="VDH-tn-Skm" secondAttribute="trailing" id="SE0-WI-nj5"/>
                             <constraint firstItem="e6D-17-97T" firstAttribute="top" secondItem="VDH-tn-Skm" secondAttribute="top" id="WEi-fr-uWL"/>
                             <constraint firstItem="VDH-tn-Skm" firstAttribute="bottom" secondItem="e6D-17-97T" secondAttribute="bottom" constant="-50" id="XY1-HH-T0l"/>
+                            <constraint firstItem="w8K-gO-WkG" firstAttribute="leading" secondItem="VDH-tn-Skm" secondAttribute="leading" constant="8" id="c3s-MV-au8"/>
+                            <constraint firstItem="VDH-tn-Skm" firstAttribute="trailing" secondItem="w8K-gO-WkG" secondAttribute="trailing" constant="8" id="mWx-tx-SnB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VDH-tn-Skm"/>
                     </view>
                     <navigationItem key="navigationItem" id="2IF-zn-Wwa"/>
+                    <connections>
+                        <outlet property="tableview" destination="0ao-8X-I5A" id="5R3-JB-VbG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6s-ht-0w9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3428" y="-583"/>
+            <point key="canvasLocation" x="3427.5362318840585" y="-583.25892857142856"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="hwE-Nl-e88">
+            <objects>
+                <viewController storyboardIdentifier="GameViewController" id="Gry-hM-Wci" userLabel="Game View Controller" customClass="GameViewController" customModule="TicTacReflexToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DUl-DD-RHp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gbg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rxl-xB-yv7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="858"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="board.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6MV-59-wSL">
+                                <rect key="frame" x="15" y="164.00000000000003" width="384" height="391.66666666666674"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="391.67000000000002" id="yUa-7l-nPj"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="jpx-3i-Gii">
+                                <rect key="frame" x="45" y="189" width="310" height="324"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3BL-Qs-Wia">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i21-fT-V7D" customClass="GameButton" customModule="TicTacReflexToe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="Je1-sk-H6U"/>
+                                                    <constraint firstAttribute="height" constant="90" id="wxI-J9-KQh"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Gry-hM-Wci" eventType="touchUpInside" id="ZSc-NG-nNy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8p-Eb-vaG" customClass="GameButton" customModule="TicTacReflexToe" customModuleProvider="target">
+                                                <rect key="frame" x="110" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="or3-s3-UsT"/>
+                                                    <constraint firstAttribute="width" constant="90" id="v3T-Xu-zWL"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Gry-hM-Wci" eventType="touchUpInside" id="rFH-ne-Q2y"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJV-1a-HEL" customClass="GameButton" customModule="TicTacReflexToe" customModuleProvider="target">
+                                                <rect key="frame" x="220" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="98B-aM-tdT"/>
+                                                    <constraint firstAttribute="height" constant="90" id="ddP-Jk-J4g"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Gry-hM-Wci" eventType="touchUpInside" id="77A-Hz-fA9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="E4R-Ek-rgr">
+                                        <rect key="frame" x="0.0" y="117" width="310" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTU-Dl-KRA" customClass="GameButton" customModule="TicTacReflexToe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="41g-ML-rba"/>
+                                                    <constraint firstAttribute="width" constant="90" id="XvR-pp-0iZ"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Gry-hM-Wci" eventType="touchUpInside" id="8Yb-ZJ-717"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYa-Lg-gT6" customClass="GameButton" customModule="TicTacReflexToe" customModuleProvider="target">
+                                                <rect key="frame" x="110" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="e8s-OV-ZPr"/>
+                                                    <constraint firstAttribute="width" constant="90" id="sFD-XH-enr"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Gry-hM-Wci" eventType="touchUpInside" id="fMx-SB-uNU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZ5-sV-WGQ" customClass="GameButton" customModule="TicTacReflexToe" customModuleProvider="target">
+                                                <rect key="frame" x="220" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="j9f-95-fMK"/>
+                                                    <constraint firstAttribute="height" constant="90" id="nQ7-qH-jVI"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Gry-hM-Wci" eventType="touchUpInside" id="aAF-Fg-q3a"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TNe-Wz-ti0">
+                                        <rect key="frame" x="0.0" y="234" width="310" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVD-iE-fcq" customClass="GameButton" customModule="TicTacReflexToe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="4RP-LG-fKK"/>
+                                                    <constraint firstAttribute="height" constant="90" id="627-MG-rvi"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Gry-hM-Wci" eventType="touchUpInside" id="5JO-nL-afK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWd-Ei-jQZ" customClass="GameButton" customModule="TicTacReflexToe" customModuleProvider="target">
+                                                <rect key="frame" x="110" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="EdN-SP-OU6"/>
+                                                    <constraint firstAttribute="height" constant="90" id="JOj-DV-v7A"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Gry-hM-Wci" eventType="touchUpInside" id="Oot-Qb-0Tw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Roo-to-wIu" customClass="GameButton" customModule="TicTacReflexToe" customModuleProvider="target">
+                                                <rect key="frame" x="220" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="6B0-mJ-JQJ"/>
+                                                    <constraint firstAttribute="height" constant="90" id="muO-EH-Nnp"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="Gry-hM-Wci" eventType="touchUpInside" id="HL2-8i-Aze"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3BL-Qs-Wia" firstAttribute="top" secondItem="jpx-3i-Gii" secondAttribute="top" id="BQ8-Ot-4du"/>
+                                    <constraint firstAttribute="bottom" secondItem="TNe-Wz-ti0" secondAttribute="bottom" id="tym-c9-3AA"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDr-ce-CdM" customClass="WhosMoveLabel" customModule="TicTacReflexToe" customModuleProvider="target">
+                                <rect key="frame" x="163.33333333333334" y="114" width="88.333333333333343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6Iy-b1-5JF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NDr-ce-CdM" firstAttribute="centerX" secondItem="DUl-DD-RHp" secondAttribute="centerX" constant="0.5" id="93T-Zs-m3a"/>
+                            <constraint firstItem="QPW-PW-lqD" firstAttribute="trailing" secondItem="rxl-xB-yv7" secondAttribute="trailing" id="Bcm-hs-lMZ"/>
+                            <constraint firstItem="rxl-xB-yv7" firstAttribute="leading" secondItem="QPW-PW-lqD" secondAttribute="leading" id="IGa-SM-DYa"/>
+                            <constraint firstItem="jpx-3i-Gii" firstAttribute="leading" secondItem="6MV-59-wSL" secondAttribute="leading" constant="30" id="Qwi-8Z-GCL"/>
+                            <constraint firstItem="QPW-PW-lqD" firstAttribute="trailing" secondItem="6MV-59-wSL" secondAttribute="trailing" constant="15" id="R30-aS-SAG"/>
+                            <constraint firstItem="jpx-3i-Gii" firstAttribute="top" secondItem="6MV-59-wSL" secondAttribute="top" constant="25" id="cJm-kA-Hbn"/>
+                            <constraint firstItem="NDr-ce-CdM" firstAttribute="top" secondItem="rxl-xB-yv7" secondAttribute="top" constant="70" id="e5b-ow-TlQ"/>
+                            <constraint firstItem="QPW-PW-lqD" firstAttribute="bottom" secondItem="rxl-xB-yv7" secondAttribute="bottom" constant="-40" id="hcS-J9-Kuz"/>
+                            <constraint firstItem="6MV-59-wSL" firstAttribute="top" secondItem="NDr-ce-CdM" secondAttribute="bottom" constant="10" id="k5H-en-0Tp"/>
+                            <constraint firstItem="6MV-59-wSL" firstAttribute="leading" secondItem="QPW-PW-lqD" secondAttribute="leading" constant="15" id="mHw-1n-GWK"/>
+                            <constraint firstItem="rxl-xB-yv7" firstAttribute="top" secondItem="QPW-PW-lqD" secondAttribute="top" id="sq4-U4-MDb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QPW-PW-lqD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Games List" id="nia-HE-QvE">
+                        <barButtonItem key="backBarButtonItem" title="Dashboard" id="jfU-RX-j8f"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="board_img" destination="6MV-59-wSL" id="DUy-HQ-bqr"/>
+                        <outlet property="whosMoveLabel" destination="NDr-ce-CdM" id="iRl-Ja-KrN"/>
+                        <outletCollection property="buttons" destination="i21-fT-V7D" collectionClass="NSMutableArray" id="Y3a-LB-WcT"/>
+                        <outletCollection property="buttons" destination="J8p-Eb-vaG" collectionClass="NSMutableArray" id="yd7-lF-1rb"/>
+                        <outletCollection property="buttons" destination="iJV-1a-HEL" collectionClass="NSMutableArray" id="Wkb-97-IUZ"/>
+                        <outletCollection property="buttons" destination="cTU-Dl-KRA" collectionClass="NSMutableArray" id="96K-Qo-sam"/>
+                        <outletCollection property="buttons" destination="ZYa-Lg-gT6" collectionClass="NSMutableArray" id="Ezy-bD-S0K"/>
+                        <outletCollection property="buttons" destination="fZ5-sV-WGQ" collectionClass="NSMutableArray" id="txE-Yb-E1K"/>
+                        <outletCollection property="buttons" destination="LVD-iE-fcq" collectionClass="NSMutableArray" id="Fm1-mL-Ac4"/>
+                        <outletCollection property="buttons" destination="rWd-Ei-jQZ" collectionClass="NSMutableArray" id="CiP-6p-3Fi"/>
+                        <outletCollection property="buttons" destination="Roo-to-wIu" collectionClass="NSMutableArray" id="pdg-ap-MF0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2XS-X2-ZqL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4258" y="-583"/>
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
         <image name="board.jpg" width="267.83999633789062" height="281.8800048828125"/>
-        <image name="envelope.open.fill" catalog="system" width="128" height="119"/>
+        <image name="envelope.open.fill" catalog="system" width="64" height="58"/>
         <image name="gbg.jpg" width="1736.699951171875" height="1204.800048828125"/>
         <image name="logbg.jpg" width="469.5" height="312.75"/>
         <image name="offline.png" width="396.3870849609375" height="396.3870849609375"/>
         <image name="online.png" width="36.176643371582031" height="36.176643371582031"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="profile-user.png" width="36.426876068115234" height="36.426876068115234"/>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="64" height="58"/>
         <image name="ttrt.png" width="150.46530151367188" height="150.46530151367188"/>
     </resources>
 </document>

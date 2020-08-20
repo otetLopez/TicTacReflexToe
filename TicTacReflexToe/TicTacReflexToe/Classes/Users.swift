@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User : CustomStringConvertible {
+class Users : CustomStringConvertible {
 
     
     private var username : String

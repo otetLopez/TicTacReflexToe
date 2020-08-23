@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class RegisterViewController: UIViewController {
     @IBOutlet weak var tf_uname: UITextField!
